@@ -11,7 +11,7 @@ Proces tworzenia slidera możesz zobaczyć na YT:
 ## Instalowanie zależności w projekcie
 
 ```
-yarn install
+yarn
 ```
 
 ### Uruchomienie projektu
