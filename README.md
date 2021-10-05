@@ -1,24 +1,21 @@
-# slider
+# Slider w Vue 3
 
-## Project setup
+Witam w repozytorium z kodem do slidera stworzonego w Vue.
+
+## YouTube
+
+Proces tworzenia slidera możesz zobaczyć na YT:
+
+[![Slider w Vue 3](https://img.youtube.com/vi/BN3kahei-_M/0.jpg)](https://www.youtube.com/watch?v=BN3kahei-_M 'Slider w Vue 3')
+
+## Instalowanie zależności w projekcie
+
 ```
-yarn install
+yarn
 ```
 
-### Compiles and hot-reloads for development
+### Uruchomienie projektu
+
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
