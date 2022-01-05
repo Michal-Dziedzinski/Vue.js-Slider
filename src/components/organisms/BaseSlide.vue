@@ -13,6 +13,9 @@ import BaseImage from '@/components/molecules/BaseImage.vue';
 import ArrowButton from '@/components/atoms/ArrowButton.vue';
 import { computed, ref } from '@vue/reactivity';
 import { onMounted, onUnmounted } from '@vue/runtime-core';
+import { useRouter } from 'vue-router';
+
+import { getNumberOfImages } from '@/helpers/getNumberOfImages';
 
 export default {
 	name: 'BaseSlide',
@@ -27,9 +30,9 @@ export default {
 		},
 	},
 	setup(props) {
-		const images = require.context('/src/assets/img', false, /^.*\.jpg$/);
+		const { push } = useRouter();
+		const numberOfImages = getNumberOfImages();
 
-		const numberOfImages = images.keys().length;
 		const slideNumber = ref(+props.photoNumber);
 
 		const isAbleToGoToPrevSlide = computed(() => slideNumber.value !== 1);
@@ -51,6 +54,7 @@ export default {
 
 		function changeSlide(param) {
 			slideNumber.value = slideNumber.value + param;
+			push(`/slide/${slideNumber.value}`);
 		}
 
 		const fileName = computed(() => `${slideNumber.value}.jpg`);
